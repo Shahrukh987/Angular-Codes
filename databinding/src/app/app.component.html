@@ -1,0 +1,47 @@
+<h1>DataBinding</h1>
+<h2>* String  Interpolation</h2>
+<p>1 -> String Interpolation is a process of transfering and exchane data int between tc to Html</p>
+<p>2 -> Data should be in the form of text</p>
+<h3>welcome,{{firstName}}</h3>
+<h4>{{user.name}},{{user.id}}</h4>
+
+<hr>
+<h2>PropertyBinding</h2>
+<p>1 -> Transfer data from ts to html</p>
+<p>2 -> Data should be in the form of text</p>
+<p>2 -> Use Square bracket to bind property means bind value to the form tag</p>
+
+<input  type="text" name="userName" [value]="userName">
+<input type="number" name = id [value]="user.id"> 
+<input type="text" name = "name" [value]="user.name"> 
+
+<hr>
+<hr>
+<h2>Event Binding</h2>
+<p>1- Transfer data html to ts> </p>
+<p>2-> Use circle bracket for event binding</p>
+<p>3-> Generally its use for call function As per event</p>
+
+<button (click)="clickMe()">click me</button>
+<input type="text" name="firstName" (keyup.enter)="f1($event)">
+
+<br> <br>
+<select name="course" id="" (change)="numberChange($event)">
+
+  <option value="b tech">b tech</option>
+
+  <option value="bca">bca</option>
+  
+</select>
+
+// twoWay Data Binding
+<h2>Two Way Data Binding</h2>
+<p>1-> Its a combination of property binding and event binding</p>
+<p>2-> transfer data from ts html or html to ts</p>
+<p>3-> Data should be in tha form of text</p>
+<p>4-> Use [()] for two way data binding</p>
+<p>4-> to achive two way data binding use [(ngModel)]</p>
+<p>6-> If you want to use ngModule then import FormsModule in aap.component.tc file</p>
+
+<input type="text" name="password" [(ngModel)]="password">
+{{password}}
